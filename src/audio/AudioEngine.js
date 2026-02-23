@@ -6,6 +6,8 @@ class AudioEngine {
     this.synth = null;
     this.filter = null;
     this.reverb = null;
+    this.droneSynth = null;
+    this.droneStarted = false;
     this.lastTypeTime = 0;
     this.typingSpeed = 0;
 
@@ -43,8 +45,37 @@ class AudioEngine {
       }
     }).connect(this.filter);
 
+    // Drone Synth
+    this.droneSynth = new Tone.PolySynth(Tone.Synth, {
+      oscillator: {
+        type: 'sine'
+      },
+      envelope: {
+        attack: 4,
+        release: 4
+      }
+    }).connect(this.filter);
+
     this.initialized = true;
     console.log('Audio Engine Initialized');
+  }
+
+  startDrone() {
+    if (!this.initialized || this.droneStarted) return;
+    this.droneStarted = true;
+    // Play a low, soft drone chord
+    const droneNotes = ['C2', 'G2', 'C3'];
+    this.droneSynth.triggerAttack(droneNotes);
+
+    // Slow fade for the volume
+    this.droneSynth.volume.value = -60;
+    this.droneSynth.volume.rampTo(-15, 5);
+  }
+
+  stopDrone() {
+    if (!this.droneStarted) return;
+    this.droneSynth.triggerRelease();
+    this.droneStarted = false;
   }
 
   handleType(char) {

@@ -1,16 +1,39 @@
-# React + Vite
+# Ambient Journal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ambient Journal is a premium journaling experience where typing triggers generative ambient music. Every keystroke contributes to a unique, real-time soundscape, turning the act of writing into a meditative, multisensory event.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Generative Audio Engine**: Built with Tone.js, translating typing into harmonious notes.
+- **Dynamic Soundscapes**: Audio textures and filters react to your typing speed and content.
+- **Premium UI**: Immersive dark theme with glassmorphism and organic animations.
+- **Privacy First**: Local-first experience where your thoughts remain your own.
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/joshuauaua/ambient-journal.git
+    cd ambient-journal
+    ```
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Run the application**:
+    ```bash
+    npm run dev
+    ```
+4.  **Open in browser**: Navigate to `http://localhost:5173`.
+5.  **Begin**: Click anywhere on the splash screen to start the Tone.js engine and begin typing.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React + Vite
+- **Audio Engine**: Tone.js
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Styling**: Vanilla CSS
+
+---
+Created with ✨ by Antigravity.

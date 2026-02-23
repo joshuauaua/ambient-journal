@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { audioEngine } from '../audio/AudioEngine';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, Music, Pen } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 const Journal = () => {
   const [content, setContent] = useState('');
@@ -56,17 +56,25 @@ const Journal = () => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              textAlign: 'center',
+              padding: '20px'
             }}
           >
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <Music size={64} color="#6366f1" style={{ marginBottom: '20px', opacity: 0.8 }} />
-            </motion.div>
-            <h1 style={{ fontSize: '2.5rem', fontWeight: '300', marginBottom: '10px' }}>Ambient Journal</h1>
-            <p style={{ opacity: 0.6, fontSize: '1.1rem' }}>Tap anywhere to begin your session</p>
+            <h1 style={{ 
+              fontSize: 'min(400px, 80vw)', 
+              fontFamily: 'Rochester, cursive', 
+              fontWeight: '400', 
+              marginBottom: '20px',
+              lineHeight: '0.8',
+              color: 'var(--text-color)',
+              textShadow: '0 0 30px rgba(99, 102, 241, 0.3)'
+            }}>
+              Ambient Journal
+            </h1>
+            <p style={{ opacity: 0.5, fontSize: '1.2rem', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+              Tap to begin session
+            </p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -78,8 +86,7 @@ const Journal = () => {
         transition={{ duration: 1, delay: 0.5 }}
       >
         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', opacity: 0.8 }}>
-          <Pen size={18} style={{ marginRight: '10px' }} />
-          <span style={{ fontSize: '0.9rem', letterSpacing: '0.1em' }}>NEW ENTRY / {new Date().toLocaleDateString()}</span>
+          <span style={{ fontSize: '0.9rem', letterSpacing: '0.2em' }}>NEW ENTRY / {new Date().toLocaleDateString()}</span>
         </div>
 
         <textarea

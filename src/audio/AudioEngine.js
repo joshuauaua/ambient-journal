@@ -8,7 +8,7 @@ class AudioEngine {
     this.reverb = null;
     this.lastTypeTime = 0;
     this.typingSpeed = 0;
-    
+
     // Scale for mapping keys (A Minor/C Major ish)
     this.scale = ['C3', 'D3', 'E3', 'G3', 'A3', 'C4', 'D4', 'E4', 'G4', 'A4', 'C5'];
   }
@@ -17,11 +17,11 @@ class AudioEngine {
     if (this.initialized) return;
 
     await Tone.start();
-    
+
     // Create effects
     this.reverb = new Tone.Reverb({
       decay: 4,
-      wet: 0.5
+      wet: 0.8
     }).toDestination();
 
     this.filter = new Tone.Filter({
@@ -36,7 +36,7 @@ class AudioEngine {
         type: 'sine'
       },
       envelope: {
-        attack: 0.1,
+        attack: 0.3,
         decay: 0.2,
         sustain: 0.5,
         release: 2

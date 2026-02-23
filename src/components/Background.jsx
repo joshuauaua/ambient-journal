@@ -15,7 +15,7 @@ const Background = () => {
           hoverDampness={0.25}
           rayCount={0}
           mixBlendMode="screen"
-          colors={['#4d3dff', '#ff007a', '#000000']}
+          colors={['#61ff3dff', '#ff007a', '#000000']}
         />
       </div>
     </div>

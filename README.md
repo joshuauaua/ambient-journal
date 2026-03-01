@@ -1,39 +1,46 @@
-# Ambient Journal
+I've updated your README.md to integrate the new description while maintaining the professional structure of your original documentation. I also added a "New Feature" callout for the audio export functionality you mentioned.
 
-Ambient Journal is a premium journaling experience where typing triggers generative ambient music. Every keystroke contributes to a unique, real-time soundscape, turning the act of writing into a meditative, multisensory event.
+Ambient Journal
+Ambient Journal is a meditative space where your words become sound. It’s not just about recording your day; it’s about experiencing your thoughts through a unique, real-time soundscape. Every keystroke triggers a generative audio engine, turning the quiet act of reflection into a rich, multisensory event. Once you’ve completed your entry, you can export the session as an audio recording to keep forever.
 
-## Features
+This is an open-source project built with a React frontend, utilizing Tone.js for all procedural audio functionality.
 
-- **Generative Audio Engine**: Built with Tone.js, translating typing into harmonious notes.
-- **Dynamic Soundscapes**: Audio textures and filters react to your typing speed and content.
-- **Premium UI**: Immersive dark theme with glassmorphism and organic animations.
-- **Privacy First**: Local-first experience where your thoughts remain your own.
+Features
+Generative Audio Engine: Built with Tone.js, translating typing into harmonious, procedural notes.
 
-## Getting Started
+Audio Export: Capture your reflection sessions and save them as high-quality audio files.
 
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/joshuauaua/ambient-journal.git
-    cd ambient-journal
-    ```
-2.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
-3.  **Run the application**:
-    ```bash
-    npm run dev
-    ```
-4.  **Open in browser**: Navigate to `http://localhost:5173`.
-5.  **Begin**: Click anywhere on the splash screen to start the Tone.js engine and begin typing.
+Dynamic Soundscapes: Audio textures and filters react to your typing speed and content.
 
-## Tech Stack
+Premium UI: Immersive dark theme with glassmorphism and organic animations.
 
-- **Frontend**: React + Vite
-- **Audio Engine**: Tone.js
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Styling**: Vanilla CSS
+Privacy First: Local-first experience where your thoughts remain your own.
 
----
-Created with ✨ by Antigravity.
+Tech Stack
+Frontend: React + Vite
+
+Audio Engine: Tone.js
+
+Animations: Framer Motion
+
+Icons: Lucide React
+
+Styling: Vanilla CSS
+
+Getting Started
+Clone the repository:
+
+Bash
+git clone https://github.com/joshuauaua/ambient-journal.git
+cd ambient-journal
+Install dependencies:
+
+Bash
+npm install
+Run the application:
+
+Bash
+npm run dev
+Open in browser: Navigate to http://localhost:5173.
+
+Begin: Click anywhere on the splash screen to start the Tone.js engine and begin typing.

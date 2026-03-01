@@ -1,5 +1,3 @@
-I've updated your README.md to integrate the new description while maintaining the professional structure of your original documentation. I also added a "New Feature" callout for the audio export functionality you mentioned.
-
 Ambient Journal
 Ambient Journal is a meditative space where your words become sound. It’s not just about recording your day; it’s about experiencing your thoughts through a unique, real-time soundscape. Every keystroke triggers a generative audio engine, turning the quiet act of reflection into a rich, multisensory event. Once you’ve completed your entry, you can export the session as an audio recording to keep forever.
 

@@ -178,7 +178,7 @@ const Journal = () => {
         <div style={{
           fontFamily: '"Unbounded", sans-serif',
           fontWeight: 300,
-          fontSize: '1.5rem',
+          fontSize: '1.25rem',
           color: 'var(--text-color)',
           opacity: 0.8,
           textShadow: '0 0 15px rgba(99, 102, 241, 0.3)',

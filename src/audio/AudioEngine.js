@@ -45,7 +45,7 @@ class AudioEngine {
 
     // Main ambient synth (Pad-like)
     this.synth = new Tone.PolySynth(Tone.Synth, {
-      volume: -12, // Lower volume
+      volume: -24, // Lower volume
       oscillator: {
         type: 'triangle' // Warmer, less glassy than sine
       },
@@ -70,7 +70,7 @@ class AudioEngine {
 
     // Regular synth for sequencer playback (Pad-like)
     this.seqSynth = new Tone.PolySynth(Tone.Synth, {
-      volume: -12, // Lower volume to match main synth
+      volume: -24, // Lower volume to match main synth
       oscillator: { type: 'triangle' },
       envelope: { attack: 1.0, decay: 0.8, sustain: 0.8, release: 5 }
     }).connect(this.filter);

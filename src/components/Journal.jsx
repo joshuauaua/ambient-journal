@@ -127,7 +127,7 @@ const Journal = () => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 3, ease: "easeOut" }}
               style={{ 
-                fontSize: 'min(100px, 80vw)', 
+                fontSize: 'clamp(40px, 12vw, 100px)', 
                 fontFamily: '"Unbounded", sans-serif', 
                 fontWeight: '200', 
                 marginBottom: '20px',

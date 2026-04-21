@@ -39,13 +39,13 @@ class AudioEngine {
 
     this.filter = new Tone.Filter({
       type: 'lowpass',
-      frequency: 2000,
+      frequency: 1200,
       rolloff: -24
     }).connect(this.reverb);
 
     // Main ambient synth (Pad-like)
     this.synth = new Tone.PolySynth(Tone.Synth, {
-      volume: -24, // Lower volume
+      volume: -32, // Lower volume
       oscillator: {
         type: 'triangle' // Warmer, less glassy than sine
       },
@@ -70,14 +70,14 @@ class AudioEngine {
 
     // Regular synth for sequencer playback (Pad-like)
     this.seqSynth = new Tone.PolySynth(Tone.Synth, {
-      volume: -24, // Lower volume to match main synth
+      volume: -32, // Lower volume to match main synth
       oscillator: { type: 'triangle' },
       envelope: { attack: 1.0, decay: 0.8, sustain: 0.8, release: 5 }
     }).connect(this.filter);
 
     // Granular effect synth (simulate grains with fast tremolo and delay)
     this.granularSynth = new Tone.PolySynth(Tone.Synth, {
-      volume: -18, // Significantly lower volume
+      volume: -28, // Significantly lower volume
       oscillator: { type: 'sine' },
       envelope: { attack: 0.3, decay: 0.2, sustain: 0.2, release: 1.0 } // Softer, less punchy envelope
     });
@@ -207,8 +207,8 @@ class AudioEngine {
     }
 
     // Dynamic filter based on speed
-    const baseFreq = 500;
-    const targetFreq = baseFreq + (this.typingSpeed * 4000);
+    const baseFreq = 300;
+    const targetFreq = baseFreq + (this.typingSpeed * 2500);
     this.filter.frequency.rampTo(targetFreq, 0.1);
   }
 

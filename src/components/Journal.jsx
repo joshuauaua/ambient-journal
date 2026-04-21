@@ -155,6 +155,26 @@ const Journal = () => {
               Tap to begin
             </motion.p>
 
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 3, duration: 2 }}
+              style={{
+                position: 'absolute',
+                bottom: '5%',
+                zIndex: 20
+              }}
+            >
+              <a href="https://www.producthunt.com/products/ambient-journal?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-ambient-journal" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1128624&theme=light&t=1776753766989" 
+                  alt="Ambient Journal - Turn Your Thoughts into an Ambient Soundscape | Product Hunt" 
+                  style={{ width: '250px', height: '54px' }} 
+                  width="250" 
+                  height="54" 
+                />
+              </a>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import * as Tone from 'tone';
 import { audioEngine } from '../audio/AudioEngine';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -186,24 +187,43 @@ const Journal = () => {
         }}>
           Ambient Journal
         </div>
-        <button
-          style={{
-            background: 'none',
-            border: 'none',
-            color: 'var(--text-color)',
-            fontSize: '1rem',
-            letterSpacing: '0.15em',
-            textTransform: 'uppercase',
-            opacity: 0.6,
-            cursor: 'pointer',
-            transition: 'opacity 0.3s'
-          }}
-          onMouseEnter={(e) => e.target.style.opacity = '1'}
-          onMouseLeave={(e) => e.target.style.opacity = '0.6'}
-          onClick={() => setShowAbout(true)}
-        >
-          About
-        </button>
+        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+          <Link
+            to="/norrsken"
+            style={{
+              textDecoration: 'none',
+              color: 'var(--text-color)',
+              fontSize: '1rem',
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
+              opacity: 0.6,
+              transition: 'opacity 0.3s',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => e.target.style.opacity = '1'}
+            onMouseLeave={(e) => e.target.style.opacity = '0.6'}
+          >
+            Norrsken
+          </Link>
+          <button
+            style={{
+              background: 'none',
+              border: 'none',
+              color: 'var(--text-color)',
+              fontSize: '1rem',
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
+              opacity: 0.6,
+              cursor: 'pointer',
+              transition: 'opacity 0.3s'
+            }}
+            onMouseEnter={(e) => e.target.style.opacity = '1'}
+            onMouseLeave={(e) => e.target.style.opacity = '0.6'}
+            onClick={() => setShowAbout(true)}
+          >
+            About
+          </button>
+        </div>
       </motion.div>
 
       <motion.div 

@@ -149,11 +149,12 @@ const Journal = () => {
                 letterSpacing: '0.2em', 
                 textTransform: 'uppercase',
                 position: 'absolute',
-                bottom: '15%'
+                bottom: '18%'
               }}
             >
               Tap to begin
             </motion.p>
+
           </motion.div>
         )}
       </AnimatePresence>
@@ -188,23 +189,6 @@ const Journal = () => {
           Ambient Journal
         </div>
         <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-          <Link
-            to="/norrsken"
-            style={{
-              textDecoration: 'none',
-              color: 'var(--text-color)',
-              fontSize: '1rem',
-              letterSpacing: '0.15em',
-              textTransform: 'uppercase',
-              opacity: 0.6,
-              transition: 'opacity 0.3s',
-              cursor: 'pointer'
-            }}
-            onMouseEnter={(e) => e.target.style.opacity = '1'}
-            onMouseLeave={(e) => e.target.style.opacity = '0.6'}
-          >
-            Norrsken
-          </Link>
           <button
             style={{
               background: 'none',
@@ -360,6 +344,40 @@ const Journal = () => {
                   <p style={{ margin: 0 }}>
                     Source Code: <a href="https://github.com/joshuauaua/ambient-journal" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>GitHub Repository</a>
                   </p>
+                  <div style={{ 
+                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif', 
+                    border: '1px solid rgba(255, 255, 255, 0.1)', 
+                    borderRadius: '12px', 
+                    padding: '20px', 
+                    maxWidth: '100%', 
+                    background: 'rgba(255, 255, 255, 0.05)', 
+                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+                    marginTop: '20px'
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                      <img 
+                        alt="Ambient Journal" 
+                        src="https://ph-files.imgix.net/a62431dc-0c93-45db-ba17-6e074de9b2b2.png?auto=format&fit=crop&w=80&h=80" 
+                        style={{ width: '64px', height: '64px', borderRadius: '8px', objectFit: 'cover', flexShrink: 0 }} 
+                      />
+                      <div style={{ flex: '1 1 0%', minWidth: '0px' }}>
+                        <h3 style={{ margin: '0px', fontSize: '18px', fontWeight: '600', color: 'var(--text-color)', lineHeight: '1.3', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                          Ambient Journal
+                        </h3>
+                        <p style={{ margin: '4px 0px 0px', fontSize: '14px', color: 'var(--text-color)', opacity: 0.6, lineHeight: '1.4', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
+                          Turn Your Thoughts into an Ambient Soundscape
+                        </p>
+                      </div>
+                    </div>
+                    <a 
+                      href="https://www.producthunt.com/products/ambient-journal?embed=true&utm_source=embed&utm_medium=post_embed" 
+                      target="_blank" 
+                      rel="noopener" 
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', marginTop: '12px', padding: '8px 16px', background: 'rgb(255, 97, 84)', color: 'rgb(255, 255, 255)', textDecoration: 'none', borderRadius: '8px', fontSize: '14px', fontWeight: '600' }}
+                    >
+                      Check it out on Product Hunt →
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>
